@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, useEffect } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
+import './App.scss';
+import MainRoute from "./Route";
+ const App =() => {
 
-function App() {
+  // const Button = React.lazy(() => {
+  //   return import("./routes/Buttons/Button");
+  // });
+  // const route =(
+  //   <Switch>
+  //       <Route path="/button" render={(props) => <Button {...props} />} />
+  //   </Switch>
+  // )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Suspense fallback={<div>Loading...</div>}><MainRoute/></Suspense>
+    </>
   );
 }
 
