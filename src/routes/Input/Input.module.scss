@@ -1,0 +1,34 @@
+.OuterContainer {
+  display: flex;
+}
+.SelectBoxContainer {
+  display: flex;
+  width: 100%;
+  input {
+    width: 100%;
+    line-height: 2rem;
+  }
+  .SelectBoxDiv {
+    width: 100%;
+    line-height: 2rem;
+    border: 1px solid black;
+  }
+}
+
+.DropDownContainer {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  .DropDownUl {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .DropDownLI {
+    border-bottom: 1px solid black;
+  }
+}
