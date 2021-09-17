@@ -1,0 +1,25 @@
+.mainContainer {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  transition: all 2s ease-in;
+  -o-background-size: 100% 100%, auto;
+  -moz-background-size: 100% 100%, auto;
+  -webkit-background-size: 100% 100%, auto;
+  background-size: 100% 100%, auto;
+  overflow: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.mainContainer::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

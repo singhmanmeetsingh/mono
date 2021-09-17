@@ -17,7 +17,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
   return (
     <Switch>
-      <Route path="/landing" render={(props)=><Landing {...props} />} />
+        <Route path="/" render={(props)=><Landing {...props} />} />
         <Route path="/button" render={(props) => <Button {...props} />} />
         <Route path='*' exact={true} component={My404Component} />
     </Switch>
