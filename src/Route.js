@@ -3,6 +3,10 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
  const MainRoute =() => {
 
+    const Landing =React.lazy(()=>{
+      return import("./routes/Landing/Landing")
+    })
+
     const Button = React.lazy(() => {
         return import("./routes/Buttons/Button");
       });
@@ -13,6 +17,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
   return (
     <Switch>
+      <Route path="/landing" render={(props)=><Landing {...props} />} />
         <Route path="/button" render={(props) => <Button {...props} />} />
         <Route path='*' exact={true} component={My404Component} />
     </Switch>
